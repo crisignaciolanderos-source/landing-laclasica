@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# EDITA la linea siguiente si publicas en un dominio distinto
+Sitemap: https://capitalizarme.com/sitemap.xml

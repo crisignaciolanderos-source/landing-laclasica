@@ -1,0 +1,459 @@
+﻿<!doctype html>
+<html lang="es-PE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1a45a3" />
+
+    <!-- EDITAR SEO: titulo, descripcion y dominio definitivo -->
+    <title>Capitalizarme | Asesoria financiera inmobiliaria </title>
+    <meta
+      name="description"
+      content="Asesoria financiera inmobiliaria: evaluamos tu capacidad crediticia, elegimos el banco adecuado y te acompaÃ±amos hasta la firma de tu proyecto."
+    />
+    <link rel="canonical" href="https://capitalizarme.com/" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Capitalizarme" />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:title" content="Capitalizarme | inversion inmobiliaria con asesoramiento" />
+    <meta
+      property="og:description"
+      content="Evaluacion crediticia, eleccion del banco y acompanamiento completo hasta la firma de tu proyecto inmobiliario."
+    />
+    <!-- EDITAR: imagen social 1200x630, con URL ABSOLUTA y el archivo en assets/img/ -->
+    <!-- <meta property="og:image" content="https://capitalizarme.com/assets/img/social-cover.jpg" /> -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#inicio">Ir al contenido principal</a>
+
+    <!-- ============================ ENCABEZADO ============================ -->
+    <header class="site-header" id="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="#inicio" aria-label="Capitalizarme, inicio">
+          <!--
+            LOGO: solo deja el archivo en assets/img/ con el nombre "logo-capitalizarme"
+            (png, jpg, webp o svg). Se muestra solo y el texto se oculta.
+          -->
+          <span
+            class="media media--logo"
+            data-img="logo-capitalizarme"
+            data-img-alt="Capitalizarme"
+            data-hide=".brand__name"
+            role="img"
+            aria-label="Logo de Capitalizarme"
+          >
+            <span class="media__hint">Tu logo aqui</span>
+          </span>
+          <span class="brand__name">Capitalizarme<span class="brand__tld">.com</span></span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Navegacion principal">
+          <button
+            class="site-nav__toggle"
+            id="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            <span class="site-nav__toggle-bars" aria-hidden="true"></span>
+            <span class="sr-only">Abrir menu</span>
+          </button>
+
+          <ul class="site-nav__list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#aliados">Aliados</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li class="site-nav__cta">
+              <a class="btn btn--primary" href="#contacto" data-scroll>Solicitar asesoria</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= 1. FRANJA DE FOTO + BOTON ================= -->
+      <!--
+        La franja muestra la imagen "hero-proyecto" a todo el ancho.
+        El boton y su posicion se controlan en script.js (CONFIG.banda):
+          modo:    "coordenadas" (recomendado) = % de la foto, el boton cae
+                   en el MISMO punto de la imagen en toda pantalla
+                   "margenes" = pixeles fijos (el modo anterior)
+          x / y:      % desde el borde izquierdo / desde el borde inferior
+          xMovil / yMovil: posicion opcional solo para celular
+          texto:    lo que dice el boton
+          sobreImagen: true (encima de la foto) | false (debajo)
+        Imagen: deja el archivo en assets/img/ con el nombre "hero-proyecto"
+        (recomendado 2000x1100 px para que no se vea pixelada).
+      -->
+      <section class="band band--coordenadas" id="inicio">
+        <div class="band__media">
+          <span
+            class="media media--band"
+            data-img="hero-proyecto"
+            data-img-alt="Render del proyecto inmobiliario"
+            role="img"
+            aria-label="Espacio reservado para la imagen principal del proyecto"
+          >
+            <span class="media__hint">Espacio para tu imagen grande (franja a todo el ancho)</span>
+          </span>
+        </div>
+
+        <div class="band__actions">
+          <a class="btn btn--rojo btn--grande" id="band-cta" href="#contacto" data-scroll>Agenda tu reu</a>
+        </div>
+      </section>
+
+      <!-- ================= 2. HERO ================= -->
+      <section class="hero" id="propuesta">
+        <div class="container">
+          <div class="hero__content" data-reveal>
+            <p class="eyebrow">Capitalizarme &middot; asesoria financiera inmobiliaria</p>
+            <!-- EDITAR: propuesta de valor -->
+            <h1 class="hero__title">
+              Invierte desde pie 0, 90% de financimiento, subsidio a la tasa 3%, rebaja de IVA y Arriendo agarantizado.
+            </h1>
+            <p class="hero__lead">
+              Evaluamos tu perfil crediticio, comparamos bancos y proyectos, y te acompanamos durante todo el
+              proceso hasta la firma. Sin sorpresas de ultima hora.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--lg" href="#contacto" data-scroll>
+                Quiero invertir
+                <span class="btn__arrow" aria-hidden="true">&rarr;</span>
+              </a>
+              </div>
+
+            <ul class="hero__trust">
+              <!-- EDITAR: cifras verificables antes de publicar -->
+              <li><strong>1</strong> Asesoria dedicada por cliente</li>
+              <li><strong>0</strong> Costos por evaluacion</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 3. VALOR: BANCOS + INMOBILIARIAS ================= -->
+      <section class="section section--light" id="aliados">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow">Red de aliados</p>
+            <!-- EDITAR -->
+            <h2 class="section__title">Trabajamos con los bancos y inmobiliarias que lideran el mercado</h2>
+            <p class="section__lead">
+               En el mercado no solo importa la ubicación del proyecto, sino tambien el respaldo del banco y la experiencia de la inmobiliaria. Por eso te mostramos quienes trabajan y confian en nosotros.
+            </p>
+          </div>
+
+          <h3 class="subhead" data-reveal>Bancos con los que trabajamos</h3>
+          <!--
+            CARRUSEL DE BANCOS: se genera solo y se mueve sin parar.
+            Para cambiar o agregar un banco, edita la lista "bancos"
+            en script.js (CONFIG). El archivo va en assets/img/ con
+            el nombre indicado, por ejemplo: assets/img/banco-1.jpg
+          -->
+          <!-- data-carrusel-direccion: "derecha" o "izquierda". Los dos carruseles
+               van en sentidos opuestos para que se vea el contraste. -->
+          <div class="carrusel" data-carrusel="bancos" data-carrusel-direccion="derecha">
+            <ul class="carrusel__pista" id="banks-list" data-reveal></ul>
+          </div>
+
+          <h3 class="subhead" data-reveal>Inmobiliarias y desarrolladores</h3>
+          <!--
+            CARRUSEL DE INMOBILIARIAS: mismo comportamiento que el de bancos.
+            Edita la lista "inmobiliarias" en script.js (CONFIG).
+            Archivo de imagen: assets/img/inmobiliaria-1.jpg
+          -->
+          <div class="carrusel" data-carrusel="inmobiliarias" data-carrusel-direccion="izquierda">
+            <ul class="carrusel__pista" id="developers-list" data-reveal></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== 2b. BENEFICIOS: SOLO VS CON ASESORAMIENTO ============== -->
+      <section class="section section--dark" id="beneficios">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow">La diferencia</p>
+            <h2 class="section__title">Invertir sin asesoramiento e invertir con asesoramiento</h2>
+            <p class="section__lead">
+              La diferencia no es el inmueble: es saber a que banco acudir, comparar las mejores condiciones con la mejores opciones. Asi
+              se evita perder meses y dinero en proyectos con inmobiliarias que no te entregaran resultados reales.
+            </p>
+          </div>
+
+          <div class="compare">
+            <article class="compare__card" data-reveal>
+              <header class="compare__head">
+                <h3 class="compare__title">Sin asesoramiento</h3>
+                <p class="compare__sub">Compras directo con el banco o la inmobiliaria</p>
+              </header>
+              <ul class="compare__list compare__list--muted">
+                <li>Presentas la misma solicitud a varios bancos sin saber cual te conviene</li>
+                <li>Poca claridad en las condiciones y requisitos</li>
+                <li>Tasas y plazos poco claros hasta el ultimo momento</li>
+                <li>Reintentos continuos que consumen tu historial y tu tiempo</li>
+                <li>Nadie te cuenta sobre los beneficios estatales</li>
+              </ul>
+              <p class="compare__foot">Resultado: mas tiempo, mas riesgo y condiciones peores.</p>
+            </article>
+
+            <article class="compare__card compare__card--highlight" data-reveal>
+              <header class="compare__head">
+                <p class="compare__tag">Con Capitalizarme</p>
+                <h3 class="compare__title"></h3>
+                <p class="compare__sub">Evaluamos, comparamos y acompaniamos tu operacion</p>
+              </header>
+              <ul class="compare__list compare__list--ok">
+                <li>Pre-evaluacion crediticia para saber tu capacidad real antes de buscar</li>
+                <li>Eleccion del banco segun tu perfil, cuota y plazo objetivo</li>
+                <li>Comparacion de proyectos por respaldo, fecha de entrega y valor de reventa</li>
+                <li>Coordinacion de la documentacion para evitar rechazos</li>
+                <li>Acompanamiento hasta la firma y la entrega</li>
+                <li>Informacion sobre beneficios estatales disponibles</li>
+              </ul>
+              <a class="btn btn--primary btn--block" href="#contacto" data-scroll>Quiero invertir con asesoria</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ 3. FORMULARIO ============================ -->
+      <!--
+        UN SOLO FORMULARIO en toda la pagina, al final.
+        El destino se configura en script.js (const CONFIG): endpoint HTTP o, en su defecto,
+        envio por WhatsApp. Aqui se define el contenido de los campos.
+      -->
+      <section class="section section--dark section--form" id="contacto">
+        <div class="container container--narrow">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow">Contacto</p>
+            <h2 class="section__title">Educate y toma decisiones guiadas, registrate y toma la asesoria con un experto</h2>
+            <p class="section__lead">
+              Respondemos en menos de 24 horas habiles. La evaluacion no tiene costo ni compromiso.
+            </p>
+          </div>
+
+          <form class="form" id="lead-form" novalidate data-reveal>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-name">Nombre y apellidos <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required />
+                <p class="field__error" id="err-name" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label for="f-phone">Telefono / WhatsApp <span class="req" aria-hidden="true">*</span></label>
+                <input
+                  id="f-phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  placeholder="+56 9 XXXX XXXX"
+                  required
+                />
+                <p class="field__error" id="err-phone" role="alert"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-email">Correo electronico <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required />
+              <p class="field__error" id="err-email" role="alert"></p>
+            </div>
+
+            <!--
+              Ingreso mensual y DICOM son preguntas con opciones, asi que van
+              en <fieldset> con <legend>: es la forma correcta para teclado y
+              lectores de pantalla. Los valores internos son cortos y sin
+              acentos porque viajan al Excel; el texto que ve la persona lo
+              traduce validacion.js.
+            -->
+            <fieldset class="field field--group" id="f-income-group" data-grupo="income">
+              <legend class="field__legend">
+                Rango de ingreso mensual <span class="req" aria-hidden="true">*</span>
+              </legend>
+              <div class="choice">
+                <label class="choice__opcion">
+                  <input type="radio" name="income" value="menos-1-3" />
+                  <span class="choice__texto">Menos de $1.300.000</span>
+                </label>
+                <label class="choice__opcion">
+                  <input type="radio" name="income" value="1-3-a-2" />
+                  <span class="choice__texto">Entre $1.300.000 y $2.000.000</span>
+                </label>
+                <label class="choice__opcion">
+                  <input type="radio" name="income" value="mas-de-2" />
+                  <span class="choice__texto">Mas de $2.000.000</span>
+                </label>
+              </div>
+              <p class="field__error" id="err-income" role="alert"></p>
+            </fieldset>
+
+            <fieldset class="field field--group" id="f-dicom-group" data-grupo="dicom">
+              <legend class="field__legend">
+                Situacion DICOM <span class="req" aria-hidden="true">*</span>
+              </legend>
+              <div class="choice">
+                <label class="choice__opcion">
+                  <input type="radio" name="dicom" value="actualmente" />
+                  <span class="choice__texto">Actualmente estoy en DICOM</span>
+                </label>
+                <label class="choice__opcion">
+                  <input type="radio" name="dicom" value="hace-tiempo" />
+                  <span class="choice__texto">Estuve en DICOM hace tiempo</span>
+                </label>
+                <label class="choice__opcion">
+                  <input type="radio" name="dicom" value="nunca" />
+                  <span class="choice__texto">Nunca he estado en DICOM</span>
+                </label>
+              </div>
+              <p class="field__error" id="err-dicom" role="alert"></p>
+            </fieldset>
+
+            <div class="field">
+              <label for="f-message">Mensaje <span class="field__hint">(opcional)</span></label>
+              <textarea
+                id="f-message"
+                name="message"
+                rows="4"
+                placeholder="Ingreso mensual, ahorro disponible, moneda, plazos, banco al que ya consultaste..."
+              ></textarea>
+            </div>
+
+            <div class="field field--check">
+              <input id="f-consent" name="consent" type="checkbox" required />
+              <label for="f-consent">
+                Autorizo a Capitalizarme a contactarme y tratar mis datos, incluido mi rango de ingreso y mi
+                situacion DICOM, solo para esta consulta.
+                <span class="req" aria-hidden="true">*</span>
+              </label>
+              <p class="field__error" id="err-consent" role="alert"></p>
+            </div>
+
+            <button class="btn btn--primary btn--lg btn--block" type="submit" id="form-submit">
+              <span class="btn__label">Solicitar asesoria</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <!--
+            AVISO CORTO DE PRIVACIDAD
+            Texto breve bajo el formulario. La politica completa se publica
+            en una pagina propia cuando estén definidos los datos del
+            responsable (razon social, RUT, plazos y destinatarios).
+          -->
+          <p class="form__legal">
+            Al enviar este formulario autorizas a <strong>Capitalizarme</strong> a tratar los datos que
+            escribiste &mdash;nombre, contacto y, si los informas, tu rango de ingreso y tu situacion
+            DICOM&mdash; unicamente para evaluar tu perfil crediticio y contactarte por esta consulta.
+            No usaremos esa informacion para terceros ni paramandarte publicidad. Puedes pedir que la
+            eliminemos o que la corrijamos escribiendo a
+            <a data-mail-link data-mail-text>cristobal.landeros@capitalizarme.com</a>.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ PIE DE PAGINA ============================ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <!-- LOGO DEL PIE: assets/img/logo-capitalizarme-mono.png (si no existe, usa el del encabezado) -->
+            <span
+              class="media media--logo"
+              data-img="logo-capitalizarme-mono logo-capitalizarme"
+              data-img-alt="Capitalizarme"
+              role="img"
+              aria-label="Logo de Capitalizarme"
+            >
+              <span class="media__hint">Logo</span>
+            </span>
+            <p class="site-footer__tagline">
+              Asesoria financiera inmobiliaria. Evaluamos tu capacidad crediticia y elegimos contigo el banco y
+              el proyecto segun tu realidad financiera.
+            </p>
+            <p class="site-footer__domain">
+              <a href="https://capitalizarme.com/">capitalizarme.com</a>
+            </p>
+          </div>
+
+          <div class="site-footer__col">
+            <h2 class="site-footer__title">Contacto</h2>
+            <!-- EDITAR: numeros y correos reales -->
+            <ul class="site-footer__list">
+              <li>
+                <span class="site-footer__label">WhatsApp</span>
+                <a href="#" data-phone-link>+51 9XX XXX XXX</a>
+              </li>
+              <li>
+                <span class="site-footer__label">Telefono</span>
+                <a href="#" data-phone-link>+51 1XX XXX XXX</a>
+              </li>
+              <li>
+                <span class="site-footer__label">Correo</span>
+                <a data-mail-link data-mail-text>cristobal.landeros@capitalizarme.com</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="site-footer__col">
+            <h2 class="site-footer__title">Ubicacion</h2>
+            <!-- EDITAR: direccion exacta y enlace de mapa -->
+            <address class="site-footer__address">
+              La Clasica &mdash; Hendaya Las Condes, Región Metropolitana, Santiago, Chile
+              <br />
+              
+            </address>
+            <p class="site-footer__note">Atencion con cita previa.</p>
+            <a class="btn btn--outline btn--sm" href="#contacto" data-scroll>Agendar una cita</a>
+          </div>
+
+          <div class="site-footer__col">
+            <h2 class="site-footer__title">Navegacion</h2>
+            <ul class="site-footer__list">
+              <li><a href="#aliados">Bancos y inmobiliarias</a></li>
+              <li><a href="#beneficios">Beneficios</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>&copy; <span id="year">2026</span> Capitalizarme. Todos los derechos reservados.</p>
+          <p class="site-footer__legal">
+            Los textos e información en ellos son referenciales y no constituyen oferta ni compromiso financiero. La
+            evaluacion crediticia se realiza segun la informacion proporcionada por el cliente.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <a class="wa-float" id="wa-float" href="#" aria-label="Escribir por WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path
+          fill="currentColor"
+          d="M12.04 2A9.9 9.9 0 0 0 2.1 11.9c0 1.75.46 3.46 1.34 4.96L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01a9.9 9.9 0 0 0 9.94-9.9A9.9 9.9 0 0 0 12.04 2Zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.34-.5.05-.98.24-3.3-.69-2.78-1.1-4.55-3.94-4.69-4.12-.14-.19-1.12-1.5-1.12-2.85 0-1.36.71-2.03.96-2.31.25-.27.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.63.48.24.57.8 1.98.87 2.12.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.13.57.17.27.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.29 1.41.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.19-.27.37-.22.63-.13.25.09 1.65.78 1.94.92.29.14.48.22.55.34.07.12.07.68-.17 1.35Z"
+        />
+      </svg>
+      <span class="wa-float__text" id="wa-float-text">Comunicate con un asesor</span>
+    </a>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="validacion.js" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
