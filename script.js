@@ -13,7 +13,7 @@ const CONFIG = {
   //   2) Sin endpoint: si hay whatsappNumber, el envio abre WhatsApp
   //      con el mensaje ya redactado.
   //   3) Si ambos estan vacios, el formulario avisa que falta configurarlo.
-  formEndpoint: "https://eu1.make.com/public/shared-scenario/uuyMv77KAGD/integration-google-sheets",
+  formEndpoint: "https://hook.eu1.make.com/uyut4gkyu3j15t5y2s95gkdvnkeefk3n",
 
   // Solo digitos con codigo de pais, sin "+" ni espacios. Ej: "51987654321"
   whatsappNumber: "56948672981",
