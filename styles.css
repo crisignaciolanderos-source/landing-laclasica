@@ -34,7 +34,7 @@
   --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --radius: 18px;
   --radius-sm: 10px;
-  --header-h: 60px;
+  --header-h: 68px;
   --container: 1200px;
   --shadow-sm: 0 1px 2px rgba(15, 45, 107, 0.06), 0 1px 3px rgba(15, 45, 107, 0.05);
   --shadow-md: 0 10px 30px rgba(15, 45, 107, 0.08);
@@ -178,14 +178,14 @@ a {
 }
 
 .btn--primary {
-  --btn-bg: var(--gold-500);
-  --btn-border: var(--gold-500);
-  --btn-fg: var(--navy-950);
+  --btn-bg: var(--navy-500);
+  --btn-border: var(--navy-500);
+  --btn-fg: #fff;
 }
 
 .btn--primary:hover {
-  --btn-bg: var(--gold-400);
-  --btn-border: var(--gold-400);
+  --btn-bg: var(--navy-600);
+  --btn-border: var(--navy-600);
 }
 
 .btn--outline {
@@ -364,7 +364,14 @@ a {
 }
 
 .site-nav__list .site-nav__cta a {
+  background: #fff;
+  border-color: #fff;
   color: var(--navy-950);
+}
+
+.site-nav__list .site-nav__cta a:hover {
+  background: #fff;
+  border-color: #fff;
 }
 
 .site-nav__list .site-nav__cta a::after {
@@ -434,7 +441,7 @@ a {
     radial-gradient(1000px 520px at 78% 8%, rgba(255, 255, 255, 0.16), transparent 60%),
     linear-gradient(180deg, var(--navy-900) 0%, var(--navy-950) 100%);
   color: #fff;
-  padding: 84px 0 96px;
+  padding: 52px 0 60px;
   overflow: hidden;
   scroll-margin-top: var(--header-h);
 }
@@ -669,7 +676,7 @@ a {
 
 .media--logo img {
   max-height: 40px;
-  max-width: 190px;
+  max-width: 260px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -722,7 +729,7 @@ a {
 /* ----------------------------- Secciones ----------------------------- */
 
 .section {
-  padding: 96px 0;
+  padding: 60px 0;
   scroll-margin-top: var(--header-h);
 }
 
@@ -737,12 +744,12 @@ a {
 }
 
 .section--form {
-  padding-bottom: 110px;
+  padding-bottom: 72px;
 }
 
 .section__head {
   max-width: 68ch;
-  margin-bottom: 52px;
+  margin-bottom: 34px;
 }
 
 .section__title {
@@ -769,7 +776,7 @@ a {
   margin-bottom: 20px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--line);
-  margin-top: 56px;
+  margin-top: 38px;
 }
 
 /* Movimiento del carrusel: la pista se desplaza y al llegar al final
@@ -1407,9 +1414,9 @@ a {
 
 .site-footer {
   background: var(--navy-950);
-  color: rgba(255, 255, 255, 0.76);
-  padding: 72px 0 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 48px 0 24px;
 }
 
 .site-footer__grid {
@@ -1630,7 +1637,7 @@ a {
   }
 
   .hero {
-    padding: 56px 0 68px;
+    padding: 38px 0 46px;
   }
 
   /* En el celular el boton mantiene el anclaje por porcentaje, para que siga
@@ -1667,7 +1674,7 @@ a {
   }
 
   .section {
-    padding: 72px 0;
+    padding: 44px 0;
   }
 
   .site-nav__toggle {
@@ -1763,8 +1770,8 @@ a {
   }
 
   .media--logo img {
-    max-height: 34px;
-    max-width: 168px;
+    max-height: 32px;
+    max-width: 200px;
   }
 
   .wa-float {
