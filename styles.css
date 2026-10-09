@@ -283,7 +283,8 @@ a {
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(26, 69, 163, 0.9);
+  background: var(--navy-900);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
   transition:
@@ -293,7 +294,7 @@ a {
 
 .site-header.is-scrolled {
   border-bottom-color: rgba(255, 255, 255, 0.1);
-  background: rgba(26, 69, 163, 0.98);
+  background: var(--navy-900);
 }
 
 .site-header__inner {
@@ -496,22 +497,22 @@ a {
 .hero__trust {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 32px;
-  margin-top: 44px;
-  padding-top: 28px;
+  gap: 10px 28px;
+  margin-top: 30px;
+  padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .hero__trust li {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.68);
 }
 
 .hero__trust strong {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   color: var(--gold-400);
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 /* --------------------- Franja de foto + boton --------------------- */
@@ -970,7 +971,7 @@ a {
 
 .compare__list li {
   position: relative;
-  padding-left: 32px;
+  padding-left: 38px;
   font-size: 0.96rem;
 }
 
@@ -978,13 +979,17 @@ a {
   position: absolute;
   left: 0;
   top: 0;
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   display: grid;
   place-items: center;
   border-radius: 50%;
-  font-size: 0.72rem;
-  font-weight: 800;
+  font-size: 0.92rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 .compare__list--muted li {
@@ -995,8 +1000,9 @@ a {
    marca lo que NO conviene, y contrasta con el verde de la otra tarjeta. */
 .compare__list--muted li::before {
   content: "\00D7";
-  background: rgba(180, 35, 24, 0.22);
-  color: #ff8a7d;
+  background: #e0483a;
+  box-shadow: 0 2px 8px rgba(224, 72, 58, 0.45);
+  padding-bottom: 2px;
 }
 
 .compare__list--ok li {
@@ -1005,8 +1011,8 @@ a {
 
 .compare__list--ok li::before {
   content: "\2713";
-  background: rgba(26, 127, 75, 0.14);
-  color: var(--ok);
+  background: #16a34a;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.4);
 }
 
 .compare__foot {
@@ -1689,7 +1695,7 @@ a {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background: var(--navy-950);
+    background: var(--navy-900);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     padding: 8px 24px 20px;
     max-height: 0;
