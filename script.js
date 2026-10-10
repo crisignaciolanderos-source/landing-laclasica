@@ -505,6 +505,33 @@ var EXTENSIONES = [".webp", ".png", ".jpg", ".jpeg", ".svg"];
     } else {
       // Sin numero: el boton sigue visible y avisa que falta configurarlo
       waFloat.href = "#";
+    }
+
+    // En celular (sin hover real) el primer toque expande el boton para
+    // mostrar el texto; el segundo toque recien abre WhatsApp.
+    var waTactil = window.matchMedia("(hover: none)").matches;
+    if (waTactil) {
+      waFloat.addEventListener("click", function (event) {
+        if (!waFloat.classList.contains("is-open")) {
+          event.preventDefault();
+          waFloat.classList.add("is-open");
+          return;
+        }
+        waFloat.classList.remove("is-open");
+        if (!waNumero) {
+          event.preventDefault();
+          mostrarToast(
+            "Falta configurar el numero de WhatsApp en landing/script.js (CONFIG.whatsappNumber)."
+          );
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!waFloat.contains(event.target)) {
+          waFloat.classList.remove("is-open");
+        }
+      });
+    } else if (!waNumero) {
       waFloat.addEventListener("click", function (event) {
         event.preventDefault();
         mostrarToast(
@@ -727,10 +754,16 @@ var EXTENSIONES = [".webp", ".png", ".jpg", ".jpeg", ".svg"];
 
   var consent = document.getElementById("f-consent");
   var consentError = document.getElementById("err-consent");
+  var consentField = consent ? consent.closest(".field--check") : null;
   if (consent) {
     consent.addEventListener("change", function () {
-      if (consent.checked && consentError) {
-        consentError.textContent = "";
+      if (consent.checked) {
+        if (consentError) {
+          consentError.textContent = "";
+        }
+        if (consentField) {
+          consentField.classList.remove("is-invalid");
+        }
       }
     });
   }
@@ -800,6 +833,9 @@ var EXTENSIONES = [".webp", ".png", ".jpg", ".jpeg", ".svg"];
     if (consent && !consent.checked) {
       if (consentError) {
         consentError.textContent = "Necesitamos tu autorización para poder contactarte.";
+      }
+      if (consentField) {
+        consentField.classList.add("is-invalid");
       }
       if (!firstInvalid) {
         firstInvalid = consent;

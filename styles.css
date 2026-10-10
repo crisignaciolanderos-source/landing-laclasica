@@ -1212,7 +1212,8 @@ a {
 .field input.is-invalid,
 .field select.is-invalid {
   border-color: var(--err);
-  background: #fdf6f5;
+  background: #fdedec;
+  box-shadow: 0 0 0 1px var(--err);
 }
 
 .field__error {
@@ -1350,9 +1351,20 @@ a {
 /* Grupo marcado como erroneo */
 .field--group.is-invalid .choice__opcion {
   border-color: var(--err);
+  background: #fdedec;
 }
 
 .field--group.is-invalid .field__legend {
+  color: var(--err);
+}
+
+/* Casilla de autorizacion marcada como erronea */
+.field--check.is-invalid input[type="checkbox"] {
+  outline: 2px solid var(--err);
+  outline-offset: 1px;
+}
+
+.field--check.is-invalid label {
   color: var(--err);
 }
 
@@ -1509,46 +1521,110 @@ a {
   max-width: 62ch;
 }
 
-/* -------------------------- Boton flotante -------------------------- */
+/* -------------------------- Boton flotante --------------------------
+   Diseno adaptado del componente "Btn" de Uiverse.io (Gaurang7717).
+   En escritorio se expande al pasar el mouse; en celular se expande en el
+   primer toque (clase .is-open, ver el manejo tactil en script.js). */
 
 .wa-float {
   position: fixed;
   right: 24px;
   bottom: 24px;
   z-index: 70;
-  display: inline-flex;
+}
+
+.wa-float.Btn {
+  display: flex;
   align-items: center;
-  gap: 10px;
-  max-width: calc(100vw - 40px);
-  padding: 14px 22px;
-  border-radius: 999px;
-  background: #1faa54;
-  color: #fff;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
   text-decoration: none;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
-  transition:
-    transform 0.2s var(--ease),
-    background-color 0.2s var(--ease);
+  background-color: #00d757;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  transition: width 0.3s var(--ease), border-radius 0.3s var(--ease);
 }
 
-.wa-float:hover {
-  transform: translateY(-2px);
-  background: #189045;
+.sign {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s var(--ease), padding 0.3s var(--ease);
 }
 
-.wa-float svg {
-  width: 24px;
-  height: 24px;
-  flex: none;
+.sign svg {
+  width: 25px;
+  height: 25px;
 }
 
-.wa-float__text {
+.sign svg path {
+  fill: #fff;
+}
+
+.text {
+  position: absolute;
+  right: 0;
+  width: 0;
+  opacity: 0;
+  color: #fff;
+  font-size: 0.88rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  line-height: 1.2;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  transition:
+    opacity 0.3s var(--ease),
+    width 0.3s var(--ease),
+    padding 0.3s var(--ease);
+}
+
+.wa-float.Btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+/* Escritorio: expande al pasar el mouse (solo donde el hover existe) */
+@media (hover: hover) {
+  .wa-float.Btn:hover {
+    width: 270px;
+    border-radius: 40px;
+  }
+
+  .wa-float.Btn:hover .sign {
+    width: 26%;
+    padding-left: 12px;
+  }
+
+  .wa-float.Btn:hover .text {
+    opacity: 1;
+    width: 74%;
+    padding-right: 14px;
+  }
+}
+
+/* Celular/tactil: primer toque expande, segundo abre WhatsApp */
+.wa-float.Btn.is-open {
+  width: 270px;
+  border-radius: 40px;
+}
+
+.wa-float.Btn.is-open .sign {
+  width: 26%;
+  padding-left: 12px;
+}
+
+.wa-float.Btn.is-open .text {
+  opacity: 1;
+  width: 74%;
+  padding-right: 14px;
+}
+
+.wa-float.Btn:active {
+  transform: translate(2px, 2px);
 }
 
 .wa-float[hidden] {
@@ -1728,6 +1804,14 @@ a {
     border-bottom: 0 !important;
     padding-top: 16px;
   }
+
+  .site-nav__cta a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 24px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1783,12 +1867,6 @@ a {
   .wa-float {
     right: 16px;
     bottom: 16px;
-    padding: 12px 18px;
-    gap: 8px;
-  }
-
-  .wa-float__text {
-    font-size: 0.88rem;
   }
 
   .toast {
